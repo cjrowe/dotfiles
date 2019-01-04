@@ -84,14 +84,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 eval "$(thefuck --alias)"
 
-alias maven-moj="cp ~/.m2/settings-moj.xml ~/.m2/settings.xml"
-alias maven-0a="cp ~/.m2/settings-0a.xml ~/.m2/settings.xml"
-
-alias teamcity="sudo docker run -it --name teamcity-server -v ~/docker-data/teamcity-server/data:/data/teamcity_server/datadir -v ~/docker-data/teamcity-server/logs:/opt/teamcity/logs -p 8111:8111 jetbrains/teamcity-server"
-alias teamcity-java-agent="sudo docker run -it -e SERVER_URL='172.17.0.1:8111' -e AGENT_NAME='java-build-agent' -v ~/docker-data/teamcity-agent/config:/data/teamcity_agent/conf jetbrains/teamcity-agent"
-
-# JIRA Plugin Configuration
-export JIRA_URL=https://triadmoj.atlassian.net
+alias hgrep="history | grep"
 
 # And, finally, the message of the day (well, terminal session anyway)
 chuck_cow
