@@ -1,0 +1,28 @@
+[profile zeroalpha]
+region=eu-west-2
+output=json
+mfa_serial=arn:aws:iam::123735005555:mfa/chris
+
+[profile hmrc]
+region=eu-west-2
+output=json
+
+[profile hmrc-qa]
+role_arn=arn:aws:iam::248771275994:role/RoleAPIPlatformEngineer
+source_profile=hmrc
+mfa_serial=arn:aws:iam::638924580364:mfa/chris.rowe
+
+[profile hmrc-dev]
+role_arn=arn:aws:iam::618259438944:role/RoleAPIPlatformEngineer
+source_profile=hmrc
+mfa_serial=arn:aws:iam::638924580364:mfa/chris.rowe
+
+[profile hmrc-integration]
+role_arn=arn:aws:iam::150648916438:role/RoleAPIPlatformEngineer
+source_profile=hmrc
+mfa_serial=arn:aws:iam::638924580364:mfa/chris.rowe
+
+[profile personal]
+region=eu-west-2
+output=json
+
