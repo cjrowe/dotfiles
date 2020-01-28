@@ -53,7 +53,7 @@ plugins=(git command-not-found jsontools sudo)
 
 # User configuration
 
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin"
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:$HOME/.jenv/bin:$HOME/.serverless/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -83,8 +83,11 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 eval "$(thefuck --alias)"
+eval "$(jenv init -)"
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 alias hgrep="history | grep"
 
 # And, finally, the message of the day (well, terminal session anyway)
 neofetch
+
