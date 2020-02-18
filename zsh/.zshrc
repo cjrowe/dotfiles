@@ -56,6 +56,8 @@ plugins=(git command-not-found jsontools sudo)
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:$HOME/.jenv/bin:$HOME/.serverless/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
+export GOPATH="/home/chris/Projects/go"
+
 source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
