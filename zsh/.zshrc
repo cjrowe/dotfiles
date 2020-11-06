@@ -53,17 +53,15 @@ plugins=(git command-not-found jsontools sudo)
 
 # User configuration
 
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:$HOME/.jenv/bin:$HOME/.serverless/bin"
+export GEM_HOME="$HOME/gems"
+
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:$HOME/.jenv/bin:$HOME/.serverless/bin:$GEM_HOME/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 export GOPATH="/home/chris/Projects/go"
 
-if [ -f "${HOME}/.gpg-agent-info" ]; then
-     . "${HOME}/.gpg-agent-info"
-       export GPG_AGENT_INFO
-       export SSH_AUTH_SOCK
-       export SSH_AGENT_PID
-fi
+export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+gpgconf --launch gpg-agent
 
 source $ZSH/oh-my-zsh.sh
 
